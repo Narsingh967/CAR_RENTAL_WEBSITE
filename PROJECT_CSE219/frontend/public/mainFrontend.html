@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Website</title>
+
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Box Icons-->
+    <link rel="stylesheet"
+    href="https://https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+
+    <!--Link to Script-->
+    <script src="./script.js"></script>
+
+<body>
+    <!--Header-->
+
+    <header>
+        <a href="#" class="logoo"><img src="img/Jeep2.png" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#ride">Ride</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+        </ul>
+
+        
+    </header>
+
+
+    <!--Home Page-->
+
+    <section class="home" id="home" background="home.png">
+        <div class="text">
+
+            <h1><span>Looking</span> to rent<br> a Car or Bike</h1>
+            <p>The best way to travel across the road to success is<br> in a vehicle that embodies the essence of success </p>
+        </div>
+
+
+        <div class="form-container">
+            <form action="" id="myForm" onsubmit="event.preventDefault(); redirectPage();">
+                
+
+                <div class="input-box">
+                    <span>Items</span>
+                    <input type="search" id="itemInput" placeholder="Choosen item" required>
+                </div>
+
+                <div class="input-box">
+                    <span>Price</span>
+                    <input type="text" id="priceInput" placeholder="Its Price" readonly required>
+                </div>
+
+                <div class="input-box">
+                    <span>Location</span>
+                    <input type="search" name="" id="locationInput" placeholder="search Places" required>
+                </div>
+
+                <div class="input-box">
+                    <span>Pick-Up Date</span>
+                    <input type="date" name="" id="pickInput" required>
+                </div>
+
+                <div class="input-box">
+                    <span>Return Date</span>
+                    <input type="date" name="" id="returnInput" required>
+                </div>
+
+
+                <input type="submit" value="Go to Another Page" class="btn" onclick="redirectPage()">
+
+                
+            </form>
+        </div>
+    </section>
+
+
+    <!--    Ride    -->
+
+    <section class="ride" id="ride">
+        <div class="heading">
+            <span>How Its Work</span>
+            <h1>Rent With 3 Easy Steps</h1>
+        </div>
+
+        <div class="ride-container">
+            <div class="box">
+                <a href="#" class="logo-location" width="80"><img src="img/bx-current-location.svg" alt=""></a>
+                <h2>Choose A Location</h2>
+                <p>Find the perfect place for your trip. You can search by city, neighborhoods, landmarks, or any other criteria.</p>
+
+            </div>
+
+            <div class="box">
+                <a href="#" class="logo-calendar" width="80"><img src="img/calendar.png" alt=""></a>
+                <h2>Pick-Up Date</h2>
+                <p>Find the perfect place for your trip. You can search by city, neighborhoods, landmarks, or any other criteria.</p>
+
+            </div>
+
+            <div class="box">
+                <a href="#" class="logo-done" width="80"><img src="img/Done.png" alt=""></a>
+                <h2>Book A Car/Bike</h2>
+                <p>Find the perfect place for your trip. You can search by city, neighborhoods, landmarks, or any other criteria.</p>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--  Services  CAR  -->
+
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Best Services</span>
+            <h1>Explore Out Top Car Deals<br>From Top Rated Dealers</h1>
+        </div>
+
+
+    <div class="services-container">
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car1.png" alt="" >
+            </div>
+            <p>2017</p>
+            <h3>Honda City</h3>
+            <h2>RS 2000<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Honda City',2000)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car2.png" alt="" >
+            </div>
+            <p>2017</p>
+            <h3>Verna </h3>
+            <h2>RS 2200<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Hundai Verna',2200)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car3.png" alt="" >
+            </div>
+            <p>2017</p>
+            <h3>Skoda Slavia</h3>
+            <h2>RS 1800<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Skoda Slavia',1800)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car4.png" alt="" >
+            </div>
+            <p>2019</p>
+            <h3>Ciaz</h3>
+            <h2>RS 1700<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Maruti Suzuki Ciaz',1700)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car5.png" alt="" >
+            </div>
+            <p>2017</p>
+            <h3>Maruti Breeza</h3>
+            <h2>RS 1600<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Maruti Suzuki Breeza',1600)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car6.png" alt="" >
+            </div>
+            <p>2022</p>
+            <h3>Hundai Creta</h3>
+            <h2>RS 1800<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Hundai Creta',1800)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car7.png" alt="" >
+            </div>
+            <p>2023</p>
+            <h3>2024 Mahindra Scorpio-N</h3>
+            <h2>RS 2500<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Mahindra Scorpio-N',2500)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car8.jpg" alt="" >
+            </div>
+            <p>2023</p>
+            <h3>2024 XUV 700</h3>
+            <h2>RS 2500<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Mahindra XUV 700',2500)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car9.jpg" alt="" >
+            </div>
+            <p>2023</p>
+            <h3>2024 Tata Harrier</h3>
+            <h2>RS 2500<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Tata Harrier',2500)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car10.jpg" alt="" >
+            </div>
+            <p>2024</p>
+            <h3>2024 Nexon EV</h3>
+            <h2>RS 2200<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Tata Nexon EV',2200)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car11.jpg" alt="" >
+            </div>
+            <p>2022</p>
+            <h3>2024 Tata Punch</h3>
+            <h2>RS 1500<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Honda City',1500)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/car12.jpg" alt="" >
+            </div>
+            <p>2023</p>
+            <h3>2024 Tata Tiago</h3>
+            <h2>RS 1300<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Tata Tiago',1300)">Rent Now</a>
+        </div>
+    </div>
+    </section>
+
+
+    <!--Services OFFROADING Cars-->
+
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Next Is</span>
+            <h1>Our OFFROADING Cars</h1>
+        </div>
+
+
+    <div class="services-container">
+        <div class="box">
+            <div class="box-img">
+                <img src="img/offroad_car1.png" alt="" >
+            </div>
+            <h3>Mahindra Thar</h3>
+            <h2>RS 3000<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Mahindra Thar',3000)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/offroad_car2.jpg" alt="" >
+            </div>
+            <h3>Jeep Wangler</h3>
+            <h2>RS 3500<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Jeep Wangler',3500)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/offroad_car3.jpg" alt="" >
+            </div>
+            
+            <h3>Toyota Fortuner</h3>
+            <h2>RS 3200<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Toyota Fortuner',3200)">Rent Now</a>
+        </div>
+
+        <div class="box">
+            <div class="box-img">
+                <img src="img/offroad_car4.jpg" alt="" >
+            </div>
+            <h3>Jeep Compass</h3>
+            <h2>RS 3500<span>/Day</span></h2>
+            <a href="#" class="btn" onclick="setDetails('Jeep Compass',3500)">Rent Now</a>
+        </div>
+    </div>
+    </section>
+
+    <!--Services of Bike-->
+
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Now Its Favourite </span>
+            <h1>Section of Every Individual Person i.e... OFFROADING BIKE</h1>
+        </div>
+
+        <div class="services-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/bike1.jpg" alt="" >
+                </div>
+                <h3>Himalayan 450</h3>
+                <h2>RS 1400<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Himalayan 450 Bike',1400)">Rent Now</a>
+            </div>
+    
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/bike2.jpg" alt="" >
+                </div>
+                <h3>Royal Enfield Meteor</h3>
+                <h2>RS 1200<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Royal Enfield Meteor Bike',1200)">Rent Now</a>
+            </div>
+    
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/bike3.jpg" alt="" >
+                </div>
+                
+                <h3>Royal Enfield Hunter 350</h3>
+                <h2>RS 1300<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Royal Enfield Hunter 350',1300)">Rent Now</a>
+            </div>
+    
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/bike4.jpg" alt="" >
+                </div>
+                <h3>Royal Enfield Bullet 350</h3>
+                <h2>RS 1000<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Royal Enfield Bullet 350',1000)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/bike5.jpg" alt="" >
+                </div>
+                <h3>Royal Continental GT 650</h3>
+                <h2>RS 1600<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Royal Enfield Continental GT 650',1600)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/bike6.jpg" alt="" >
+                </div>
+                <h3>Royal Enfield Shotgun 650</h3>
+                <h2>RS 1500<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Royal Enfield Shotgun 650',1500)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/bike7.png" alt="" >
+                </div>
+                <h3>TVS Ronin</h3>
+                <h2>RS 1200<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('TVS Ronin Bike',1200)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/bike8.jpg" alt="" >
+                </div>
+                <h3>TVS Apache RTR 310</h3>
+                <h2>RS 1200<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('TVS Apache RTR 310',1200)">Rent Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--services DailyUse Bike-->
+
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Now Its Time </span>
+            <h1>For Common BIKES For Short-Distance</h1>
+        </div>
+
+        <div class="services-container">
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/commonbike1.jpg" alt="" >
+                </div>
+                <h3>TVS Apache RTR 160</h3>
+                <h2>RS 900<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('TVS Apache RTR 160 ',900)">Rent Now</a>
+            </div>
+    
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/commonbike2.jpg" alt="" >
+                </div>
+                <h3>TVS Apache RTR 160 4V</h3>
+                <h2>RS 1200<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('TVS Apache RTR 160 4V',1200)">Rent Now</a>
+            </div>
+    
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/commonbike3.jpg" alt="" >
+                </div>
+                
+                <h3>TVS Raider</h3>
+                <h2>RS 800<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('TVS Raider',800)">Rent Now</a>
+            </div>
+    
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/commonbike4.jpg" alt="" >
+                </div>
+                <h3>Honda Livo</h3>
+                <h2>RS 700<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Honda Livo Bike',700)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/commonbike5.jpg" alt="" >
+                </div>
+                <h3>Hero Splendor Pro</h3>
+                <h2>RS 800<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Hero Splendor Pro Bike',800)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/commonbike6.jpg" alt="" >
+                </div>
+                <h3>Passion Pro</h3>
+                <h2>RS 900<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Passion Pro Bike',900)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/commonbike7.jpg" alt="" >
+                </div>
+                <h3>TVS Ntorq 125</h3>
+                <h2>RS 700<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('TVS Ntorq 125 Scooty',700)">Rent Now</a>
+            </div>
+
+            <div class="box">
+                <div class="box-img">
+                    <img src="img/commonbike8.png" alt="" >
+                </div>
+                <h3>Honda Activa 125</h3>
+                <h2>RS 600<span>/Day</span></h2>
+                <a href="#" class="btn" onclick="setDetails('Honda Activa 125 Scooty',600)">Rent Now</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--About Section-->
+
+    <section class="about" id="about">
+        <div class="heading">
+            <span>About Us</span>
+            <h1>Best Customer Experience</h1>
+        </div>
+
+        <div class="about-container">
+            <div class="about-img">
+                <img src="img/about.jpg" height="50" width="30" alt="">
+            </div>
+
+            <div class="about-text">
+                <span>About Us</span>
+                <p>To empower travelers by providing flexible, reliable, and affordable rental solutions.We strive to enhance your journey with our vehicles, ensuring you have a memorable experience.</p>
+                <p>Welcome to our service, your premier destination for hassle-free vehicle rentals!, we have been committed to providing top-notch rental services, offering a diverse range of cars and bikes that cater to all your travel needs. Whether you’re planning a scenic road trip, navigating the bustling streets of the city, or seeking an adventurous ride across rugged terrains, we have the perfect vehicle for you.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  Reviews  -->
+
+    <section class="reviews" id="reviews">
+        <div class="heading">
+            <span>Reviews</span>
+            <h1>What Our Customers Say</h1>
+        </div>
+
+        <div class="reviews-container">
+            <div class="box">
+                <div class="rev-img">
+                    <img src="img/rev1.jpg" alt="" />
+                </div>
+
+                <h2>Shourya Prakash</h2>
+
+                <div class="stars">
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                </div>
+                <p>"I rented a car for a week-long road trip and could not be happier with the experience. The booking process was straightforward, the prices were reasonable, and the car was in perfect condition. Thanks to your service, we had a smooth and enjoyable trip. Highly recommend!"</p>
+            </div>
+
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="img/rev2.jpg" alt="" />
+                </div>
+
+                <h2>Narsingh Prasad Nishad</h2>
+
+                <div class="stars">
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                </div>
+                <p>"From start to finish, the customer service was impeccable. I appreciated the transparent pricing and the quick, hassle-free pickup and drop-off. I've rented from many places before, but your service truly stands out for their professionalism and quality."</p>
+            </div>
+
+
+            <div class="box">
+                <div class="rev-img">
+                    <img src="img/rev3.jpg" alt="" />
+                </div>
+
+                <h2>Ns</h2>
+
+                <div class="stars">
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                    <a href="#" class="logo-location" width="80"><img src="img/revlogo.png" alt=""></a>
+                </div>
+                <p>"I was amazed by the variety of vehicles available, from economy to luxury. The staff helped me choose the perfect car for my needs, and it was spotless and ready to go when I arrived. Will definitely be coming back next time I need a rental!"</p>
+            </div>
+        </div>
+    </section>
+
+    <h1 style="text-align:center">Designed By NS</h1>
+
+    <!--Script-->
+
+    <script>
+        function setDetails(Item,price){
+    document.getElementById('priceInput').value = "RS "+  price+"/Day";
+    document.getElementById('itemInput').value=Item;
+    }
+
+    function redirectPage() {
+
+        var userInput1 = document.getElementById('locationInput').value;
+        var userInput2 = document.getElementById('pickInput').value;
+        var userInput3 = document.getElementById('returnInput').value;
+
+        if (userInput1.trim() !== '' ||  userInput2.trim() !== '' ||  userInput3.trim() !== ''){
+        // Redirect to the specified URL if input is filled
+        window.location.href = "/frontend/public/proceed.html";
+    } else {
+        // Display a message if the input field is empty
+        document.getElementById('message').textContent = 'Please fill out this field before proceeding.';
+    }
+}
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Booking Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style_proceed.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="form-title">Booking Page</h1>
+        <form id="bookingForm" action="http://localhost:3000/send-email" method="POST">
+            <div class="main-user-info">
+                <!-- Other input fields remain unchanged -->
+
+                <div class="user-input-box">
+                  <label for="fullName">Full Name</label>
+                  <input type="text"
+                          id="fullName"
+                          name="fullName"
+                          placeholder="Enter Full Name"/>
+                </div>
+                <div class="user-input-box">
+                  <label for="location">Location</label>
+                  <input type="text"
+                          id="location"
+                          name="location"
+                          placeholder="Enter Location"/>
+                </div>
+                <div class="user-input-box">
+                  <label for="email">Email</label>
+                  <input type="email"
+                          id="email"
+                          name="email"
+                          placeholder="Enter Email"/>
+                </div>
+                <div class="user-input-box">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="text"
+                          id="phoneNumber"
+                          name="phoneNumber"
+                          placeholder="Enter Phone Number"/>
+                </div>
+                <div class="user-input-box">
+                  <label for="password">Aadhar-Card-Number</label>
+                  <input type="number"
+                          id="Aadhar-Card-Number"
+                          name="Aadhar-Card-Number"
+                          placeholder="Enter Number"/>
+                </div>
+                <div class="user-input-box">
+                  <label for="confirmPassword">LPU-ID</label>
+                  <input type="number"
+                          id="LPU-ID"
+                          name="LPU-ID"
+                          placeholder="Enter Number"/>
+                </div>
+
+                <div class="gender-details-box">
+                  <span class="gender-title">Gender</span>
+                  <div class="gender-category">
+                      <input type="radio" name="gender" id="male" value="male">
+                      <label for="male">Male</label>
+                      <input type="radio" name="gender" id="female" value="female">
+                      <label for="female">Female</label>
+                      <input type="radio" name="gender" id="other" value="other">
+                      <label for="other">Other</label>
+                  </div>
+              </div>
+
+              <div class="form-submit-btn">
+                <input type="button" onclick="starter();submitForm()" value="Click For Confirm Booking">
+            </div>
+              </div>
+            </div>
+            
+            
+        </form>
+    </div>
+    <script src="proceed.js"></script>
+</body>
+
+<script>
+
+function submitForm() {
+    const form = document.getElementById('bookingForm');
+    const formData = new FormData(form);
+
+    fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())  // Assuming server responds with JSON
+    .then(data => alert(data.message))
+    .catch(error => console.error('Error:', error));
+}
+
+</script>
+</html>

@@ -1,0 +1,1 @@
+if (mongoose.connection.readyState === 0) 
